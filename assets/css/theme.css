@@ -225,3 +225,38 @@ footer .social a {
   font-size: 18px;
 }
 
+.content-area {
+  margin-top: 15px;
+}
+
+.post-content {
+  background: #0f172a;
+  border-radius: 18px;
+  padding: 22px;
+}
+
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 13px;
+  color: #94a3b8;
+  margin-bottom: 18px;
+  align-items: center;
+}
+
+.post-meta span {
+  background: #020617;
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+
+.share-post {
+  margin-left: auto;
+  background: #22c55e;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
