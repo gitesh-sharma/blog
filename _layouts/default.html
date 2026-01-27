@@ -7,16 +7,73 @@
 
 <div class="container">
 
+  <!-- TOP HEADER (LOGO + HOME/BLOG) -->
+  <header class="top-nav">
+    <span class="logo">Logo</span>
+    <nav>
+      <a href="{{ site.baseurl }}/">Blog</a>
+      <a href="https://gitesh-sharma.github.io/en/">Home</a>
+    </nav>
+  </header>
+
+  <!-- PROFILE CARD -->
   {% include profile.html %}
+
+  <!-- MENU BUTTONS -->
   {% include menu.html %}
 
-  <div class="blog-list">
-    {{ content }}
+  <!-- MAIN CONTENT AREA -->
+  <div class="content-area">
+
+    {% if page.layout == "post" %}
+      <!-- SINGLE BLOG POST -->
+      <article class="post-content">
+        <h1>{{ page.title }}</h1>
+
+        <div class="post-meta">
+          <span>✍️ {{ page.author | default: site.author.name }}</span>
+          <span>📅 {{ page.date | date: "%d %B %Y" }}</span>
+          <span>⏱ {{ content | number_of_words | divided_by: 200 | plus: 1 }} min read</span>
+          <button class="share-post" onclick="sharePost()">🔗 Share</button>
+        </div>
+
+        {{ content }}
+      </article>
+
+    {% else %}
+      <!-- BLOG POST LIST (HOME PAGE) -->
+      <div class="blog-list">
+        {% for post in site.posts %}
+          <a class="post-card" href="{{ site.baseurl }}{{ post.url }}">
+            <h3>{{ post.title }}</h3>
+            <span>{{ post.date | date: "%d %b %Y" }}</span>
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+
   </div>
 
+  <!-- FOOTER -->
   {% include footer.html %}
 
 </div>
+
+<script>
+function sharePost() {
+  const data = {
+    title: document.title,
+    text: "{{ page.title }}",
+    url: window.location.href
+  };
+  if (navigator.share) {
+    navigator.share(data);
+  } else {
+    navigator.clipboard.writeText(data.url);
+    alert("Link copied!");
+  }
+}
+</script>
 
 </body>
 </html>
