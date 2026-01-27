@@ -20,7 +20,7 @@ title: Home | Gitesh Sharma - Sharmaji Technology Media
     <div class="post-list">
       {% for post in site.posts %}
         <p>
-          <a href="{{ post.url }}">{{ post.title }}</a>
+          <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
         </p>
       {% endfor %}
     </div>
