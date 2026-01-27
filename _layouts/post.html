@@ -29,37 +29,34 @@
   </script>
 </head>
 
-<body>
+<body class="post-page">
 
-<!-- HEADER (POST PAGE ONLY) -->
 <header class="post-header-nav">
-  <nav>
+  <nav class="post-nav">
     <a href="https://gitesh-sharma.github.io/en/">Home</a>
     <a href="{{ site.baseurl }}/">Blog</a>
   </nav>
 </header>
 
-<!-- POST CONTENT -->
-<main class="post-container">
-  <article class="post-content">
+<main class="post-main">
+  <article class="post-article">
 
-    <h1>{{ page.title }}</h1>
+    <h1 class="post-title">{{ page.title }}</h1>
 
-    <!-- POST META -->
     <div class="post-meta">
       <span>✍️ {{ page.author | default: site.author.name }}</span>
       <span>📅 {{ page.date | date: "%d %B %Y" }}</span>
       <span>⏱ {{ content | number_of_words | divided_by: 200 | plus: 1 }} min read</span>
-
       <button class="share-post" onclick="sharePost()">🔗 Share</button>
     </div>
 
-    {{ content }}
+    <div class="post-body">
+      {{ content }}
+    </div>
 
   </article>
 </main>
 
-<!-- FOOTER -->
 <footer class="post-footer">
   <div class="social">
     <a href="#"><i class="fab fa-facebook"></i></a>
@@ -69,7 +66,6 @@
   </div>
 </footer>
 
-<!-- SHARE SCRIPT -->
 <script>
 function sharePost() {
   const data = {
@@ -77,7 +73,6 @@ function sharePost() {
     text: "{{ page.title }}",
     url: window.location.href
   };
-
   if (navigator.share) {
     navigator.share(data);
   } else {
@@ -88,4 +83,3 @@ function sharePost() {
 </script>
 
 </body>
-</html>
