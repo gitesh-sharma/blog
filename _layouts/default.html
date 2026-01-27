@@ -1,7 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  {% include head.html %}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>{{ page.title }}</title>
+
+<link rel="icon" href="/en/images/favicon.png">
+<link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+/* 🔥 TERA POORA CSS YAHI PASTE KAR */
+:root{
+  --primary:#1aa84b;
+  --primary-dark:#1e40af;
+  --bg:#020617;
+  --card:#0f172a;
+  --border:#1e293b;
+  --text:#e5e7eb;
+  --muted:#94a3b8;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui}
+
+body{
+  min-height:100vh;
+  background:linear-gradient(135deg,#020617,#f28c28);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--text);
+}
+
+.wrapper{width:100%;max-width:420px;padding:18px;}
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:26px 22px;
+  text-align:center;
+}
+</style>
+
 </head>
 <body>
 
