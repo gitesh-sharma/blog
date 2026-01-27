@@ -1,11 +1,29 @@
 ---
 layout: default
-title: Blog Posts
+title: Home | Gitesh Sharma - Sharmaji Technology Media
 ---
 
-{% for post in site.posts %}
-<a class="post-card" href="{{ site.baseurl }}{{ post.url }}">
-  <h3>{{ post.title }}</h3>
-  <span>{{ post.date | date: "%d %b %Y" }}</span>
-</a>
-{% endfor %}
+<div class="wrapper">
+  <div class="card">
+
+    <img src="/en/images/gitesh-sharma.png" class="avatar">
+
+    <div class="name">Gitesh <span>Sharma</span></div>
+
+    <div class="nav-menu">
+      <a href="/en/">Home</a> •
+      <a href="/en/blog/">Blog</a> •
+      <a href="/en/org/contact-us.html">Contact</a>
+    </div>
+
+    <!-- 🔥 BLOG LIST AUTO -->
+    <div class="post-list">
+      {% for post in site.posts limit:5 %}
+        <p>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </p>
+      {% endfor %}
+    </div>
+
+  </div>
+</div>
