@@ -5,6 +5,7 @@ baseurl: "/blog"
 
 author:
   name: Gitesh Sharma
+  username: "@giteshsharma"
 
 markdown: kramdown
 theme: minima
