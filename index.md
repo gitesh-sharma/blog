@@ -1,17 +1,11 @@
 ---
 layout: default
-title: Blog
+title: Blog Posts
 ---
-<h1>Sharmaji Blog 🚀</h1>
-<p>Latest articles on SEO, tools, and technology.</p>
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ site.baseurl }}{{ post.url }}">
-        {{ post.title }}
-      </a>
-      <small> – {{ post.date | date: "%d %b %Y" }}</small>
-    </li>
-  {% endfor %}
-</ul>
+{% for post in site.posts %}
+<a class="post-card" href="{{ site.baseurl }}{{ post.url }}">
+  <h3>{{ post.title }}</h3>
+  <span>{{ post.date | date: "%d %b %Y" }}</span>
+</a>
+{% endfor %}
