@@ -1,0 +1,77 @@
+body {
+  background: radial-gradient(circle at top, #1b2a4a, #0b0f1f);
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  color: #fff;
+}
+
+.container {
+  max-width: 420px;
+  margin: auto;
+  padding: 15px;
+}
+
+.profile-card {
+  position: relative;
+  background: #0f172a;
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+}
+
+.share-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #1e293b;
+  border: none;
+  color: #fff;
+  border-radius: 50%;
+  padding: 8px;
+}
+
+.avatar {
+  width: 90px;
+  border-radius: 50%;
+  border: 3px solid #22c55e;
+}
+
+.profile-card h1 span {
+  color: #22c55e;
+}
+
+.menu .btn {
+  display: block;
+  background: #0f172a;
+  padding: 14px;
+  border-radius: 12px;
+  margin: 10px 0;
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu .btn.active {
+  border: 1px solid #22c55e;
+}
+
+.post-card {
+  display: block;
+  background: #0f172a;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #fff;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+footer .social a {
+  margin: 0 8px;
+  color: #fff;
+}
