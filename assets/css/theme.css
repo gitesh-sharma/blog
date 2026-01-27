@@ -64,7 +64,21 @@ body {
   color: #fff;
 }
 
-/* POST HEADER NAV */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+footer .social a {
+  margin: 0 8px;
+  color: #fff;
+}
+
+/* ==============================
+   POST PAGE ONLY ADDITIONS
+   ============================== */
 
 .post-header-nav {
   padding: 15px;
@@ -77,8 +91,6 @@ body {
   text-decoration: none;
   font-weight: 500;
 }
-
-/* READING TIME + META */
 
 .post-meta {
   display: flex;
@@ -106,15 +118,8 @@ body {
   font-size: 13px;
 }
 
-
-footer {
-  text-align: center;
-  margin-top: 30px;
-  font-size: 14px;
-  opacity: 0.8;
-}
-
-footer .social a {
-  margin: 0 8px;
-  color: #fff;
+.post-container {
+  max-width: 720px;
+  margin: auto;
+  padding: 20px;
 }
