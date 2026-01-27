@@ -11,7 +11,6 @@
  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
-/* 🔥 TERA POORA CSS YAHI PASTE KAR */
 :root{
   --primary:#1aa84b;
   --primary-dark:#1e40af;
@@ -22,7 +21,12 @@
   --muted:#94a3b8;
 }
 
-*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
+}
 
 body{
   min-height:100vh;
@@ -33,13 +37,166 @@ body{
   color:var(--text);
 }
 
-.wrapper{width:100%;max-width:420px;padding:18px;}
+.wrapper{
+  width:100%;
+  max-width:420px;
+  padding:18px;
+}
+
 .card{
+  position:relative;
   background:var(--card);
   border:1px solid var(--border);
   border-radius:18px;
   padding:26px 22px;
   text-align:center;
+  box-shadow:0 20px 40px rgba(0,0,0,.45);
+}
+
+/* SHARE ICON */
+.share-wrapper{
+  position:absolute;
+  top:14px;
+  right:14px;
+}
+
+.share-btn{
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  background:transparent;
+  border:1px solid var(--border);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  transition:.2s ease;
+}
+
+.share-btn svg{
+  width:16px;
+  height:16px;
+  fill:var(--muted);
+}
+
+.share-btn:hover{
+  background:#020617;
+}
+.share-btn:hover svg{
+  fill:#fff;
+}
+
+/* PROFILE */
+.avatar{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  object-fit:cover;
+  border:2px solid var(--primary);
+  margin-bottom:12px;
+}
+
+.name{
+  font-size:22px;
+  font-weight:600;
+}
+
+.name span{
+  color:var(--primary);
+}
+
+.username{
+  font-size:13px;
+  color:var(--muted);
+  margin-top:2px;
+}
+
+.tagline{
+  font-size:14px;
+  color:var(--muted);
+  margin:18px 0 22px;
+}
+
+/* LINKS */
+.links{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.links a{
+  text-decoration:none;
+  padding:14px 16px;
+  border-radius:12px;
+  background:#020617;
+  border:1px solid var(--border);
+  color:#fff;
+  font-size:15px;
+  font-weight:500;
+  transition:.25s ease;
+}
+
+.links a:hover{
+  background:linear-gradient(135deg,var(--primary),var(--primary-dark));
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(37,99,235,.35);
+}
+
+
+/* SOCIAL ICONS */
+.social-icons{
+  margin-top:18px;
+  display:flex;
+  justify-content:center;
+  gap:14px;
+}
+
+.social-icons a{
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  background:#020617;
+  border:1px solid var(--border);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  font-size:18px;
+  text-decoration:none;
+  outline:none;
+  -webkit-tap-highlight-color:transparent;
+  transition:.25s;
+}
+
+/* BRAND HOVER COLORS */
+.social-icons a.instagram:hover{background:#E4405F}
+.social-icons a.facebook:hover{background:#1877F2}
+.social-icons a.youtube:hover{background:#FF0000}
+.social-icons a.whatsapp:hover{background:#25D366}
+
+/* FOOTER */
+.footer{
+  margin-top:20px;
+  font-size:12px;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+.footer a{
+  color:var(--muted);
+  text-decoration:none;
+}
+
+.footer a:hover{
+  color:#fff;
+}
+
+/* MOBILE */
+@media(max-width:380px){
+  .avatar{width:50px;height:50px;}
+  .name{font-size:20px;}
+  .links a{font-size:14px;}
+  .social-icons a{width:40px;height:40px;font-size:16px;}
 }
 </style>
 
