@@ -23,7 +23,65 @@ title: Home | Gitesh Sharma - Sharmaji Technology Media
           <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
         </p>
       {% endfor %}
-    </div>
-   
+    </div> 
   </div>
 </div>
+
+
+<div class="wrapper">
+  <div class="card">
+
+    <!-- SHARE -->
+    <div class="share-wrapper">
+      <button class="share-btn" onclick="openShare()" aria-label="Share">
+        <svg viewBox="0 0 24 24">
+          <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11A3 3 0 1 0 14 5c0 .24.04.47.09.7L7.04 9.81A3 3 0 1 0 6 15c.38 0 .74-.07 1.04-.19l7.05 4.11c-.05.21-.09.43-.09.66a3 3 0 1 0 3-3z"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- PROFILE -->
+    <img src="images/gitesh-sharma.png" class="avatar" alt="Gitesh Sharma">
+    <div class="name">Gitesh <span>Sharma</span></div>
+    <div class="username">@giteshsharma_</div>
+    <div class="tagline">Blogger • Founder of Sharmaji Tools</div>
+
+    <!-- LINKS -->
+    <div class="links">
+      <a href="/en/org/" target="_blank"><i class="fa fa-globe"></i> Official Website</a>
+      <a href="/en/org/tools.html" target="_blank"><i class="fa fa-cogs"></i> Tools Dashboard</a>
+      <a href="/en/org/music/" target="_blank"><i class="fa fa-music"></i> Music Distribution</a>
+      <a href="/en/org/about-us.html" target="_blank"><i class="fa fa-user-circle-o"></i> About Me</a>
+      <a href="/en/org/contact-us.html" target="_blank"><i class="fa fa-envelope-o"></i> Contact Me</a>
+      <a href="#" target="_blank"><i class="fa fa-book"></i> Blog Posts</a>
+    </div>
+
+    <!-- SOCIAL -->
+    <div class="social-icons">
+      <a href="https://www.facebook.com/gitesh.g.sharma" class="facebook"><i class="fa fa-facebook"></i></a>
+      <a href="https://www.instagram.com/giteshsharma_" class="instagram"><i class="fa fa-instagram"></i></a>
+      <a href="https://youtu.be/kJHVeDs999w?si=B9_36mbrIo-SJCcL" class="youtube"><i class="fa fa-youtube-play"></i></a>
+      <a href="https://www.whatsapp.com/channel/0029Va9TSWEInlqWFXYRvx02" class="whatsapp"><i class="fa fa-whatsapp"></i></a>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      © 2026 Sharmaji Technology Media<br>
+      <a href="/en/org/legal/privacy.html">Privacy</a> • <a href="/en/org/sitemap.html">Sitemap</a>
+    </div>
+
+  </div>
+</div>
+
+<script>
+const pageUrl = window.location.href;
+const pageTitle = "Gitesh Sharma | Sharmaji Tools";
+
+function openShare(){
+  if(navigator.share){
+    navigator.share({ title: pageTitle, url: pageUrl });
+  }else{
+    alert("Sharing supported on mobile browsers.");
+  }
+}
+</script>
