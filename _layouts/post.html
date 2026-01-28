@@ -5,6 +5,9 @@ layout: default
 <div class="wrapper">
   <div class="card">
     <h1>{{ page.title }}</h1>
+     <p>{{ page.date | date: "%d %B %Y" }} •
+          {{ content | number_of_words | divided_by: 200 | plus: 1 }} min read</p>
     <p>{{ content }}</p>
+    {% include footer.html %}
   </div>
 </div>
