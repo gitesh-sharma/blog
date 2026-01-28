@@ -16,14 +16,7 @@ title: Home | Gitesh Sharma - Sharmaji Technology Media
       <a href="/en/org/contact-us.html">Contact</a>
     </div>
 
-    <!-- 🔥 BLOG LIST AUTO -->
-    <div class="post-list">
-      {% for post in site.posts %}
-        <p>
-          <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-        </p>
-      {% endfor %}
-    </div> 
+    
   </div>
 </div>
 
@@ -55,6 +48,14 @@ title: Home | Gitesh Sharma - Sharmaji Technology Media
       <a href="/en/org/contact-us.html" target="_blank"><i class="fa fa-envelope-o"></i> Contact Me</a>
       <a href="#" target="_blank"><i class="fa fa-book"></i> Blog Posts</a>
     </div>
+    <!-- 🔥 BLOG LIST AUTO -->
+    <div class="post-list">
+      {% for post in site.posts %}
+        <p>
+          <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        </p>
+      {% endfor %}
+    </div> 
 
     <!-- SOCIAL -->
     <div class="social-icons">
