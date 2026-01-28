@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Welcome to Sharmaji Blog"
-description: A sitemap is a file where you provide information about the pages, videos, and other files on your site in organised
+title: "What is Sitemap? What is this important?"
+description: A sitemap is a file where you provide information about the pages, videos, and other files on your site in organised..
 date: 2026-01-28
 author: Gitesh Sharma
 ---  
