@@ -35,6 +35,29 @@ layout: default
   </button>
   </div>
   {% endunless %}
+
+
+<hr class="recent-divider">
+
+<section class="recent-posts">
+  <h3>Recent Posts</h3>
+  <ul>
+    {% for post in site.posts limit:5 %}
+      {% if post.url != page.url %}
+      <li>
+        <a href="{{ post.url | relative_url }}">
+          {{ post.title }}
+        </a>
+        <span class="post-date">
+          {{ post.date | date: "%d %B %Y" }}
+        </span>
+      </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</section>
+
+
     
     {% include footer.html %}
 
