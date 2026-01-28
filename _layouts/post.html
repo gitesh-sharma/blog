@@ -5,7 +5,7 @@ layout: default
 <div class="wrapper">
   <div class="card">
     <h1 align="left">{{ page.title }}</h1>
-     <div class="post-meta">
+    <div class="post-meta">
     <i class="fa fa-user-circle-o"></i> {{ page.author | default: "Gitesh Sharma" }} •
     <i class="fa fa fa fa-calendar"></i> {{ page.date | date: "%d %B %Y" }} •
     <i class="fa fa fa-clock-o"></i> {{ content | number_of_words | divided_by: 200 | plus: 1 }} min read
