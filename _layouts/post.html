@@ -12,33 +12,28 @@ layout: default
     <i class="fa fa fa fa-calendar"></i> {{ page.date | date: "%d %B %Y" }} •
     <i class="fa fa fa-clock-o"></i> {{ content | number_of_words | divided_by: 200 | plus: 1 }} min read
     </div>
-    <hr class="post-divider">
-    <p>{{ content }}</p>
-  </div>
-    
-    {% unless page.url == "/blog/" %}
-
-<div class="post-share">
+      
+  {% unless page.url == "/blog/" %}
+  <div class="post-share">
   <span>Share:</span>
-
   <a href="https://wa.me/?text={{ page.title | url_encode }}%20{{ page.url | absolute_url }}" target="_blank">
     <i class="fa fa-whatsapp"></i>
   </a>
-
   <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}" target="_blank">
     <i class="fa fa-facebook"></i>
   </a>
-
   <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ page.url | absolute_url }}" target="_blank">
     <i class="fa fa-twitter"></i>
   </a>
-
   <button onclick="copyPostLink()">
     <i class="fa fa-link"></i>
   </button>
-</div>
-
-{% endunless %}
+  </div>
+  {% endunless %}
+    
+    <hr class="post-divider">
+    <p>{{ content }}</p>
+  </div>
     
     <hr class="post-divider">
     {% include footer.html %}
