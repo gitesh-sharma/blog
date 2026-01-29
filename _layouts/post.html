@@ -85,6 +85,18 @@ layout: default
 
 <!-- ================== AUTO SEO SCHEMA END ================== -->
 
+{% assign content = content %}
+
+{% if page.internal_links %}
+  {% for item in page.internal_links %}
+    {% assign keyword = item[0] %}
+    {% assign url = item[1] %}
+    {% assign link = '<a href="' | append: url | append: '">' | append: keyword | append: '</a>' %}
+    {% assign content = content | replace_first: keyword, link %}
+  {% endfor %}
+{% endif %}
+
+{{ content }}
 
 <div class="wrapper">
   <div class="card">
