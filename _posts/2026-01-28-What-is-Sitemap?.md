@@ -1,9 +1,12 @@
 ---
 layout: post
-title: "What is Sitemap? What is this important?"
+title: "What is Sitemap?"
 description: A sitemap is a file where you provide information about the pages, videos, and other files on your site in organised..
 date: 2026-01-28
 author: Gitesh Sharma
+internal_links:
+  sitemap: /blog/what-is-sitemap/
+  seo: /blog/what-is-seo/
 ---  
 
 This is most important for user engagement or search engine optimization on your blog or website. Which leads to an increase in visitors of your website and a decreasement in the bounce rate of your website.
