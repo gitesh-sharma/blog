@@ -39,23 +39,35 @@ layout: default
 
 <hr class="recent-divider">
 
-<section class="recent-posts">
+<div class="recent-posts">
   <h3>Recent Posts</h3>
+
   <ul>
-    {% for post in site.posts limit:5 %}
-      {% if post.url != page.url %}
-      <li>
-        <a href="{{ post.url | relative_url }}">
-          {{ post.title }}
-        </a>
-        <span class="post-date">
-          {{ post.date | date: "%d %B %Y" }}
-        </span>
-      </li>
+    {% for post in site.posts limit:3 %}
+    <li class="recent-card">
+
+      {% if post.image %}
+      <img src="{{ post.image }}" alt="{{ post.title }}" class="recent-thumb">
       {% endif %}
+
+      <a href="{{ site.baseurl }}{{ post.url }}" class="recent-title">
+        {{ post.title }}
+      </a>
+
+      <div class="recent-meta">
+        By {{ post.author | default: "Gitesh Sharma" }} ·
+        {{ post.date | date: "%d %b %Y" }}
+      </div>
+
+      <p class="recent-desc">
+        {{ post.excerpt | strip_html | truncate: 110 }}
+      </p>
+
+    </li>
     {% endfor %}
   </ul>
-</section>
+</div>
+
 
 
     
