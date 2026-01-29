@@ -373,6 +373,10 @@ body{
   box-shadow: 0 10px 30px rgba(0,0,0,.4);
   flex-wrap: wrap;   /* 👈 MOST IMPORTANT */
   row-gap: 8px;
+  position: sticky;
+  top: 12px;              /* thoda gap upar se */
+  z-index: 999;
+  backdrop-filter: blur(10px);
 }
 
 /* Left side: Logo + Blog */
