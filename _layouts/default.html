@@ -353,12 +353,88 @@ body{
   opacity: 0.85;
 }
 
-/* Sirf Recent Posts ke content ko left align karo */
+/* recent post align */
 .recent-posts ul,
 .recent-card,
 .recent-card * {
   text-align: left;
 }
+
+/* cusrtom header */
+/* BLOG HEADER */
+.blog-header {
+  padding: 18px;
+}
+
+.blog-header-inner {
+  max-width: 900px;
+  margin: auto;
+  background: linear-gradient(135deg, #020617, #020617);
+  border-radius: 22px;
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 10px 30px rgba(0,0,0,.45);
+  border: 1px solid #1e293b;
+}
+
+/* Avatar */
+.blog-avatar img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #1aa84b;
+}
+
+/* Title */
+.blog-title {
+  flex: 1;
+  margin-left: 14px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.blog-title .slash {
+  color: #1aa84b;
+  margin-right: 4px;
+}
+
+/* Navigation */
+.blog-nav {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.blog-nav a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.blog-nav a:hover {
+  color: #1aa84b;
+}
+
+.blog-nav span {
+  margin: 0 6px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .blog-header-inner {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .blog-title {
+    margin-left: 0;
+  }
+}
+ 
  
 </style>
 
