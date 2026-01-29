@@ -33,6 +33,38 @@ title: Home | Gitesh Sharma - Sharmaji Technology Media
       {% endfor %}
     </div> 
 
+    <hr class="recent-divider">
+
+<div class="recent-posts">
+  <h3>Recent Posts</h3>
+
+  <ul>
+    {% for post in site.posts limit:3 %}
+    <li class="recent-card">
+
+      {% if post.image %}
+      <img src="{{ post.image }}" alt="{{ post.title }}" class="recent-thumb">
+      {% endif %}
+
+      <a href="{{ site.baseurl }}{{ post.url }}" class="recent-title">
+        {{ post.title }}
+      </a>
+
+      <div class="recent-meta">
+        By {{ post.author | default: "Gitesh Sharma" }} ·
+        {{ post.date | date: "%d %b %Y" }}
+      </div>
+
+      <p class="recent-desc">
+        {{ post.excerpt | strip_html | truncate: 110 }}
+      </p>
+
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+
     <!-- SOCIAL -->
     <div class="social-icons">
       <a href="https://www.facebook.com/gitesh.g.sharma" class="facebook"><i class="fa fa-facebook"></i></a>
