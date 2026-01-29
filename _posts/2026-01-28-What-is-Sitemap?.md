@@ -11,6 +11,8 @@ This is most important for user engagement or search engine optimization on your
 ### What is Sitemap?
 A sitemap is a file where you provide information about the pages, videos, and other files on your site in organised way and search engines crawler bots like Googlebot, Bingbot, Baiduspider, Applebot & other bots read this file to more intelligently crawl your site.
 
+![What is Sitemap](https://bloggingguide.com/wp-content/uploads/2021/09/how-to-create-an-amazing-blog-featured-image-1280x720.png)
+
 ### What is XML Sitemap?
 An XML means extensible markup language. Now, XML Sitemap is the set of website pages or blog posts. It's look like URL table list to tell search engines what content is available and how to reach it.
 
