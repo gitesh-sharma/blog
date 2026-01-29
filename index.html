@@ -13,7 +13,7 @@ title: Home | Gitesh Sharma - Sharmaji Technology Media
         </svg>
       </button>
     </div>
-
+    {% include header.html %}
     <!-- PROFILE -->
     <img src="/en/images/gitesh-sharma.png" class="avatar" alt="Gitesh Sharma">
     <div class="name">Gitesh <span>Sharma</span></div>
@@ -24,14 +24,6 @@ title: Home | Gitesh Sharma - Sharmaji Technology Media
       <a href="/blog/">Blog</a> •
       <a href="/en/org/contact-us.html">Contact</a>
     </div>
-    <!-- 🔥 BLOG LIST AUTO -->
-    <div class="post-list">
-      {% for post in site.posts %}
-        <p>
-          <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-        </p>
-      {% endfor %}
-    </div> 
 
     <hr class="recent-divider">
 
@@ -63,7 +55,8 @@ title: Home | Gitesh Sharma - Sharmaji Technology Media
     {% endfor %}
   </ul>
 </div>
-
+    
+     {% include footer.html %}
 
     <!-- SOCIAL -->
     <div class="social-icons">
