@@ -273,47 +273,74 @@ body{
  
 
 
- .recent-divider {
-  margin: 35px 0 20px;
+.recent-divider {
+  margin: 40px 0 25px;
   border: none;
-  border-top: 1px solid rgba(255,255,255,0.15);
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.25),
+    transparent
+  );
 }
 
+/* Container */
 .recent-posts {
-  margin-top: 20px;
+  margin-top: 10px;
+  padding: 18px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(6px);
 }
 
+/* Heading */
 .recent-posts h3 {
-  font-size: 18px;
-  margin-bottom: 12px;
-  color: #fff;
+  font-size: 17px;
+  margin-bottom: 14px;
+  color: #ffffff;
+  letter-spacing: 0.3px;
 }
 
+/* List reset */
 .recent-posts ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
+/* Each post */
 .recent-posts li {
-  margin-bottom: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
+.recent-posts li:last-child {
+  border-bottom: none;
+}
+
+/* Link */
 .recent-posts a {
-  color: #4da3ff;
+  display: block;
+  font-size: 15px;
+  color: #7ab7ff;
   text-decoration: none;
   font-weight: 500;
+  transition: all 0.25s ease;
 }
 
 .recent-posts a:hover {
-  text-decoration: underline;
+  color: #ffffff;
+  transform: translateX(4px);
 }
 
+/* Date */
 .recent-posts .post-date {
-  display: block;
+  margin-top: 3px;
   font-size: 12px;
-  opacity: 0.7;
+  opacity: 0.65;
 }
+
  
 </style>
 
