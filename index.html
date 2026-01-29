@@ -19,28 +19,33 @@ title: Blog | Gitesh Sharma - Sharmaji Technology Media
 <div class="recent-posts">
   <h3>Recent Posts</h3>
 
+  <div class="recent-posts">
+  <h3>Recent Posts</h3>
+
   <ul>
-    {% for post in site.posts limit:3 %}
+    {% for post in site.posts limit:5 %}
     <li class="recent-card">
+  <a href="{{ site.baseurl }}{{ post.url }}" class="recent-link">
 
-      {% if post.image %}
-      <img src="{{ post.image }}" alt="{{ post.title }}" class="recent-thumb">
-      {% endif %}
+    {% if post.image %}
+    <img src="{{ post.image }}" alt="{{ post.title }}" class="recent-thumb">
+    {% endif %}
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="recent-title">
-        {{ post.title }}
-      </a>
+    <span class="recent-title">
+      {{ post.title }}
+    </span>
 
-      <div class="recent-meta">
-        By {{ post.author | default: "Gitesh Sharma" }} ·
-        {{ post.date | date: "%d %b %Y" }}
-      </div>
+    <div class="recent-meta">
+      By {{ post.author | default: "Gitesh Sharma" }} ·
+      {{ post.date | date: "%d %b %Y" }}
+    </div>
 
-      <p class="recent-desc">
-        {{ post.excerpt | strip_html | truncate: 110 }}
-      </p>
+    <p class="recent-desc">
+      {{ post.excerpt | strip_html | truncate: 110 }}
+    </p>
 
-    </li>
+  </a>
+</li>
     {% endfor %}
   </ul>
 </div>
