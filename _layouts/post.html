@@ -85,19 +85,6 @@ layout: default
 
 <!-- ================== AUTO SEO SCHEMA END ================== -->
 
-{% assign content = content %}
-
-{% if page.internal_links %}
-  {% for item in page.internal_links %}
-    {% assign keyword = item[0] %}
-    {% assign url = item[1] %}
-    {% assign link = '<a href="' | append: url | append: '">' | append: keyword | append: '</a>' %}
-    {% assign content = content | replace_first: keyword, link %}
-  {% endfor %}
-{% endif %}
-
-{{ content }}
-
 <div class="wrapper">
   <div class="card">
     {% include header.html %}
@@ -110,6 +97,16 @@ layout: default
     <i class="fa fa fa-clock-o"></i> {{ content | number_of_words | divided_by: 200 | plus: 1 }} min read
     </div>
     <hr class="post-divider">
+    {% assign content = content %}
+
+{% if page.internal_links %}
+  {% for item in page.internal_links %}
+    {% assign keyword = item[0] %}
+    {% assign url = item[1] %}
+    {% assign link = '<a href="' | append: url | append: '">' | append: keyword | append: '</a>' %}
+    {% assign content = content | replace_first: keyword, link %}
+  {% endfor %}
+{% endif %}
     <p>{{ content }}</p>
   </div>
     
