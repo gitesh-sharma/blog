@@ -442,7 +442,70 @@ body{
     margin-left: 0;
   }
 }*/
- 
+
+
+
+.blog-header{
+  background: linear-gradient(135deg,#0b1220,#101a2e);
+  padding: 12px 16px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 10px 30px rgba(0,0,0,.4);
+}
+
+/* Left side: Logo + Blog */
+.header-left{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Logo */
+.logo-img{
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid #1db954;
+}
+
+/* Links */
+.logo-link,
+.blog-link{
+  text-decoration: none;
+}
+
+/* Blog text */
+.blog-link{
+  font-size: 22px;
+  font-weight: 600;
+  color: #1db954;
+}
+
+/* Right navigation */
+.header-nav{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.header-nav a{
+  color: #cfd6e4;
+  text-decoration: none;
+}
+
+.header-nav span{
+  color: #3a4560;
+}
+
+/* Hover */
+.header-nav a:hover,
+.blog-link:hover{
+  color: #1db954;
+}
+
  
 </style>
 
