@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "What is Sitemap?"
-description: A sitemap is a file where you provide information about the pages, videos, and other files on your site in organised..
+description: A sitemap is a file where you provide information about the pages, videos, and other files on your site in organised.
+image: https://bloggingguide.com/wp-content/uploads/2021/09/how-to-create-an-amazing-blog-featured-image-1280x720.png
 date: 2026-01-28
 author: Gitesh Sharma
 ---  
