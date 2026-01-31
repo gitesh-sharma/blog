@@ -308,11 +308,22 @@ body{
 }
 
 /* Card */
-.recent-card {
+/*.recent-card {
   padding: 14px 0;
   border-bottom: 1px solid rgba(255,255,255,0.08);
-}
+}*/
 
+.recent-card{
+  background: rgba(255,255,255,0.02);
+  border-radius: 12px;
+  padding: 14px 10px;   /* 👈 yahin fix */
+  transition:
+    transform .35s cubic-bezier(.4,0,.2,1),
+    box-shadow .35s ease,
+    background .25s ease;
+  will-change: transform;
+}
+ 
 .recent-card:last-child {
   border-bottom: none;
 }
@@ -369,9 +380,13 @@ body{
   border-radius: 12px;
   padding: 14px 10px;
   transition: .25s ease;
-  transform: translateY(-2px) scale(1.02);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(0,0,0,.45);
 }
-
+.recent-card:active{
+  transform: translateY(-4px) scale(1.01);
+}
+ 
 /*header code new*/
 
 .blog-header{
