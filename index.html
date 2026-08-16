@@ -58,9 +58,10 @@ const pageTitle = "Blog - Gitesh Sharma | Sharmaji Tools";
 
 function openShare(){
   if(navigator.share){
-    navigator.share({ title: pageTitle, url: pageUrl });
+    navigator.share({ title: pageTitle, url: pageUrl }).catch(function(err){});
   }else{
-    alert("Sharing supported on mobile browsers.");
+    navigator.clipboard.writeText(pageUrl);
+    alert("Blog URL copied to clipboard 👍");
   }
 }
 </script>

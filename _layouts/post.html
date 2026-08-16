@@ -115,16 +115,28 @@ layout: default
       {% unless page.url == "/blog/" %}
   <div class="post-share">
   <span>Share:</span>
-  <a href="https://wa.me/?text={{ page.title | url_encode }}%20{{ page.url | absolute_url }}" target="_blank">
+  <a href="https://wa.me/?text={{ page.title | url_encode }}%20{{ page.url | absolute_url }}" target="_blank" title="Share on WhatsApp">
     <i class="fa fa-whatsapp"></i>
   </a>
-  <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}" target="_blank">
+  <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}" target="_blank" title="Share on Facebook">
     <i class="fa fa-facebook"></i>
   </a>
-  <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ page.url | absolute_url }}" target="_blank">
+  <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ page.url | absolute_url }}" target="_blank" title="Share on X (Twitter)">
     <i class="fa fa-twitter"></i>
   </a>
-  <button onclick="copyPostLink()">
+  <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url }}" target="_blank" title="Share on LinkedIn">
+    <i class="fa fa-linkedin"></i>
+  </a>
+  <a href="https://reddit.com/submit?url={{ page.url | absolute_url }}&title={{ page.title | url_encode }}" target="_blank" title="Share on Reddit">
+    <i class="fa fa-reddit"></i>
+  </a>
+  <a href="https://pinterest.com/pin/create/button/?url={{ page.url | absolute_url }}&description={{ page.title | url_encode }}" target="_blank" title="Share on Pinterest">
+    <i class="fa fa-pinterest"></i>
+  </a>
+  <button onclick="nativeOrCopyShare()" title="More Share Options">
+    <i class="fa fa-share-alt"></i>
+  </button>
+  <button onclick="copyPostLink()" title="Copy Link">
     <i class="fa fa-link"></i>
   </button>
   </div>
@@ -174,6 +186,18 @@ layout: default
 
 
 <script>
+function nativeOrCopyShare() {
+  if (navigator.share) {
+    navigator.share({
+      title: "{{ page.title }}",
+      text: "{{ page.description | default: page.title }}",
+      url: window.location.href
+    }).catch(function(err) {});
+  } else {
+    copyPostLink();
+  }
+}
+
 function copyPostLink(){
   navigator.clipboard.writeText(window.location.href);
   alert("Post link copied 👍");
