@@ -2,6 +2,7 @@
 layout: post
 title: "Welcome to Sharmaji Blog"
 description: Introduction to Sharmaji Blog powered by Jekyll
+image: /blog/assets/images/blog-post-images.webp
 date: 2026-01-27
 author: Gitesh Sharma
 ---
