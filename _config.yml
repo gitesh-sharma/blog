@@ -1,7 +1,7 @@
 title: Gitesh Sharma Blog
 description: This is the blog of Gitesh Sharma.
 url: "https://gitesh-sharma.github.io"
-baseurl: ""
+baseurl: "/blog"
 
 author:
   name: Gitesh Sharma

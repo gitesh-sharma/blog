@@ -2,6 +2,7 @@
 layout: post
 title: "Mastering SEO for Personal Tech Blogs in 2026"
 description: Learn essential technical SEO practices, structured metadata markup, and fast page loading strategies to rank higher.
+image: /blog/assets/images/blog-post-images.webp
 date: 2026-01-30
 author: Gitesh Sharma
 tags: [SEO, Tech, Web]

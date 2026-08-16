@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Gitesh Sharma Blog - Daily Tech & Development
+title: Gitesh Sharma Blog
 ---
 <div class="wrapper">
   <div class="card">
@@ -44,103 +44,23 @@ title: Gitesh Sharma Blog - Daily Tech & Development
 
   </a>
 </li>
-
-<div class="search-box">
-  <i class="fa fa-search search-icon"></i>
-  <input type="text" id="searchInput" class="search-input" placeholder="Search daily posts by title, tag, or topic..." onkeyup="filterPosts()">
-</div>
-
-<div class="tag-pills">
-  <button class="tag-pill active" onclick="filterTag('all', this)">All Posts</button>
-  <button class="tag-pill" onclick="filterTag('SEO', this)">SEO</button>
-  <button class="tag-pill" onclick="filterTag('Blogging', this)">Blogging</button>
-  <button class="tag-pill" onclick="filterTag('Tech', this)">Tech</button>
-  <button class="tag-pill" onclick="filterTag('Tutorial', this)">Tutorial</button>
-</div>
-
-<hr class="recent-divider">
-
-<div class="recent-posts">
-  <h3>
-    <span>Daily Blog Stream</span>
-    <span class="daily-badge">Updated Daily</span>
-  </h3>
-
-  <ul id="postList">
-    {% for post in site.posts %}
-    <li class="recent-card post-item" data-title="{{ post.title | downcase }}" data-tags="{{ post.tags | join: ' ' | downcase }}">
-      <a href="{{ site.baseurl }}{{ post.url }}" class="recent-link">
-        {% if post.image %}
-        <img src="{{ post.image }}" alt="{{ post.title }}" class="recent-thumb">
-        {% endif %}
-
-        <span class="recent-title">{{ post.title }}</span>
-
-        <div class="recent-meta">
-          <span>By {{ post.author | default: "Gitesh Sharma" }}</span> •
-          <span>{{ post.date | date: "%d %b %Y" }}</span>
-        </div>
-
-        <p class="recent-desc">
-          {{ post.excerpt | strip_html | truncate: 120 }}
-        </p>
-
-        {% if post.tags %}
-        <div class="post-tags">
-          {% for tag in post.tags %}
-          <span class="post-tag">#{{ tag }}</span>
-          {% endfor %}
-        </div>
-        {% endif %}
-      </a>
-    </li>
     {% endfor %}
   </ul>
+</div>
 
-  <div id="noResults" style="display: none; text-align: center; color: var(--muted); padding: 20px 0;">
-    No daily posts found matching your search.
+     {% include footer.html %}
   </div>
 </div>
 
 <script>
-function filterPosts() {
-  const input = document.getElementById('searchInput').value.toLowerCase();
-  const posts = document.querySelectorAll('.post-item');
-  let visibleCount = 0;
+const pageUrl = window.location.href;
+const pageTitle = "Blog - Gitesh Sharma | Sharmaji Tools";
 
-  posts.forEach(post => {
-    const title = post.getAttribute('data-title') || '';
-    const tags = post.getAttribute('data-tags') || '';
-    const text = post.innerText.toLowerCase();
-
-    if (title.includes(input) || tags.includes(input) || text.includes(input)) {
-      post.style.display = 'block';
-      visibleCount++;
-    } else {
-      post.style.display = 'none';
-    }
-  });
-
-  document.getElementById('noResults').style.display = visibleCount === 0 ? 'block' : 'none';
-}
-
-function filterTag(tag, element) {
-  document.querySelectorAll('.tag-pill').forEach(btn => btn.classList.remove('active'));
-  element.classList.add('active');
-
-  const posts = document.querySelectorAll('.post-item');
-  let visibleCount = 0;
-
-  posts.forEach(post => {
-    const tags = post.getAttribute('data-tags') || '';
-    if (tag === 'all' || tags.includes(tag.toLowerCase())) {
-      post.style.display = 'block';
-      visibleCount++;
-    } else {
-      post.style.display = 'none';
-    }
-  });
-
-  document.getElementById('noResults').style.display = visibleCount === 0 ? 'block' : 'none';
+function openShare(){
+  if(navigator.share){
+    navigator.share({ title: pageTitle, url: pageUrl });
+  }else{
+    alert("Sharing supported on mobile browsers.");
+  }
 }
 </script>

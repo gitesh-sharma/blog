@@ -1,0 +1,44 @@
+---
+layout: default
+title: "Page Not Found - 404"
+permalink: /404.html
+---
+
+<div class="wrapper">
+  <div class="card">
+    {% include header.html %}
+
+    <div class="post-content" style="text-align: center; padding: 30px 10px;">
+      <h1 style="font-size: 48px; color: var(--primary);">404</h1>
+      <h2>Page Not Found</h2>
+      <p style="margin: 15px 0; color: var(--muted);">
+        The page you are looking for might have moved or the URL might be missing the <code>/blog/</code> prefix.
+      </p>
+
+      <p id="redirect-msg" style="font-size: 14px; margin-bottom: 20px; color: #1db954;">
+        Checking for correct blog path...
+      </p>
+
+      <a href="{{ site.baseurl }}/" class="btn" style="display: inline-block; padding: 10px 20px; background: var(--primary); color: #fff; text-decoration: none; border-radius: 12px; font-weight: 600;">
+        🏠 Return to Blog Home
+      </a>
+    </div>
+
+    {% include footer.html %}
+  </div>
+</div>
+
+<script>
+(function() {
+  var path = window.location.pathname;
+  var baseurl = "{{ site.baseurl }}"; // e.g., /blog
+
+  if (baseurl && !path.startsWith(baseurl)) {
+    var targetUrl = window.location.origin + baseurl + path;
+    document.getElementById("redirect-msg").innerText = "Redirecting to " + targetUrl + "...";
+    window.location.replace(targetUrl);
+  } else {
+    document.getElementById("redirect-msg").innerText = "Please browse our recent posts below.";
+  }
+})();
+</script>

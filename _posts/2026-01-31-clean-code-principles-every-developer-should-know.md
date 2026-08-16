@@ -2,6 +2,7 @@
 layout: post
 title: "Clean Code Principles Every Developer Should Follow"
 description: Essential guidelines for writing readable, maintainable, and elegant code across any programming language.
+image: /blog/assets/images/blog-post-images.webp
 date: 2026-01-31
 author: Gitesh Sharma
 tags: [Tech, CleanCode, Tutorial]

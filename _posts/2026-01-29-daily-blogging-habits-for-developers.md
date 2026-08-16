@@ -2,6 +2,7 @@
 layout: post
 title: "Daily Blogging Habits for Developers: How to Stay Consistent"
 description: Practical tips and strategies for software engineers and creators to post high-quality technical content every single day.
+image: /blog/assets/images/blog-post-images.webp
 date: 2026-01-29
 author: Gitesh Sharma
 tags: [Blogging, Tech, Productivity]
