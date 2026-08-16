@@ -93,8 +93,8 @@ layout: default
     <hr class="post-divider">
     <div class="post-meta">
     <i class="fa fa-user-circle-o"></i> {{ page.author | default: "Gitesh Sharma" }} •
-    <i class="fa fa fa fa-calendar"></i> {{ page.date | date: "%d %B %Y" }} •
-    <i class="fa fa fa-clock-o"></i> {{ content | number_of_words | divided_by: 200 | plus: 1 }} min read
+    <i class="fa fa-calendar"></i> {{ page.date | date: "%d %B %Y" }} •
+    <i class="fa fa-clock-o"></i> {{ content | number_of_words | divided_by: 200 | plus: 1 }} min read
     </div>
     <hr class="post-divider">
     {% assign content = content %}
