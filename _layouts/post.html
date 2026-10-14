@@ -115,18 +115,21 @@ layout: default
       {% unless page.url == "/blog/" %}
   <div class="post-share">
   <span>Share:</span>
-  <a href="https://wa.me/?text={{ page.title | url_encode }}%20{{ page.url | absolute_url }}" target="_blank">
+  <a href="https://wa.me/?text={{ page.title | url_encode }}%20{{ page.url | absolute_url }}" target="_blank" aria-label="Share on WhatsApp">
     <i class="fa fa-whatsapp"></i>
   </a>
-  <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}" target="_blank">
+  <a href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}" target="_blank" aria-label="Share on Facebook">
     <i class="fa fa-facebook"></i>
   </a>
-  <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ page.url | absolute_url }}" target="_blank">
-    <i class="fa fa-twitter"></i>
+  <a href="https://x.com/intent/post?text={{ page.title | url_encode }}&url={{ page.url | absolute_url }}" target="_blank" aria-label="Share on X">
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
   </a>
-  <button onclick="copyPostLink()">
+  <button onclick="copyPostLink()" aria-label="Copy Link">
     <i class="fa fa-link"></i>
   </button>
+  </div>
+  <div class="post-share-url-wrapper">
+    <a href="{{ page.url | absolute_url }}" target="_blank" class="post-share-url">{{ page.url | absolute_url }}</a>
   </div>
   {% endunless %}
 
